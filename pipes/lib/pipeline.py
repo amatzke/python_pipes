@@ -4,7 +4,7 @@ import logging
 
 class Pipeline(object):
 
-    STEPS = ['pipes.steps.uppercase']
+    STEPS = ['pipes.steps.uppercase','pipes.steps.doublestep','pipes.steps.datestep' ]
 
     def __init__(self):
         self.load_components()
@@ -28,7 +28,7 @@ class Pipeline(object):
                 step_object = self.create_object(step, 'Step')
                 self.pipeline.append(getattr(step_object, 'run'))
             except:
-                logging.warning('Error occured loading {0}'.format(step))
+                logging.warning('Error occurred loading {0}'.format(step))
                 logging.exception('Error loading pipeline component')
 
     def run(self, input):
