@@ -32,7 +32,7 @@ class uppercaseTest(unittest.TestCase):
         self.assertEqual(self.originalValue.upper(), self.inputList['UCASE'])
         
         
-        self.assertEqual(self.originalValue, self.inputList['UCASE'])
+        self.assertNotEqual(self.originalValue, self.inputList['UCASE'])
         
 
         

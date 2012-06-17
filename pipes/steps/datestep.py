@@ -7,4 +7,4 @@ class Step(object):
     def run(self, input):
         logging.info('Adding the Date')       
         now = datetime.datetime.now() 
-        input['Date'] = str(now)
+        input['DATE'] = str(now)

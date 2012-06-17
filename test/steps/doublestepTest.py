@@ -31,7 +31,8 @@ class doublestepTest(unittest.TestCase):
         self.assertEqual(self.originalValue, self.inputList[self.originalKey])
         
         """check that new value is correct"""
-        self.assertEqual(self.originalValue+self.originalValue, self.inputList[self.doubleKey])
+        self.assertEqual(self.originalValue + ' ' + self.originalValue, 
+                         self.inputList[self.doubleKey])
                 
         self.assertNotEqual(self.originalValue, self.inputList[self.doubleKey])
       
@@ -42,7 +43,7 @@ class doublestepTest(unittest.TestCase):
         self.inputList.clear();
         self.inputList = {self.originalKey:""}          
         step.run(self.inputList)
-        self.assertEqual("", self.inputList[self.doubleKey])
+        self.assertEqual(" ", self.inputList[self.doubleKey])
                 
    
       

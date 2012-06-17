@@ -17,7 +17,7 @@ class datestepTest(unittest.TestCase):
         self.originalKey = 'original'
         self.originalValue = 'Hello Python'
         self.inputList = {self.originalKey: self.originalValue}     
-        self.doubleKey = 'DATE';
+        self.dateKey = 'DATE';
 
 
     def runBasicTest(self):
@@ -34,9 +34,9 @@ class datestepTest(unittest.TestCase):
         
         """check that new value is correct"""
         now = datetime.datetime.now() 
-        self.assertEqual(str(now), self.inputList[self.doubleKey])
+        self.assertEqual(str(now), self.inputList[self.dateKey])
                 
-        self.assertNotEqual(self.originalValue, self.inputList[self.doubleKey])
+        self.assertNotEqual(self.originalValue, self.inputList[self.dateKey])
       
 
         
